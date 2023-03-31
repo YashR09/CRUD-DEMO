@@ -58,4 +58,21 @@ resize: none;
     height: 50px;
     box-shadow: inset 4px 4px 4px #cbced1;
 }
+.imageDiv{
+  border-radius: 56%;
+  height: 64px;
+  width: 101px !important;
+  margin-left: 40px !important;
+
+}
+.imageBtn{
+  width: 100px;
+  height: 32px;
+  margin-top: 5px !important;
+  padding-right: 100px !important;
+  padding-bottom: 30px !important;
+  padding-top: 0px !important;
+  margin-right: 12px !important;
+}
+
 

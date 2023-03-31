@@ -38,7 +38,6 @@ function savedata() {
       const reader = new FileReader();
       reader.onload = function (e) {
         var sessionDataForUrl = JSON.parse(sessionStorage.getItem("loginForm"));
-        console.log(sessionDataForUrl);
 
         var updatedData = sessionDataForUrl.map((data) => {
           if (data.uniqueId == id) {
@@ -89,7 +88,14 @@ function showDataInTable(form) {
         <td id= "email">${data.Email}</td>
         <td id= "phone">${data.Phone}</td>
         <td id= "message">${data.Message}</td>
-        <td id= "Files"><a href="${data.imageUrl}" target="_blank" class="autofill">${data.imageName}</a></td>
+        <td id= "Files"><div class="row ">
+        <img src="${data.imageUrl}" alt="" class="imageDiv">
+    </div>
+    <div class="row btn btn-outline-primary imageBtn">
+      <a href="${data.imageUrl}" target="_blank" class="autofill text-dark text-decoration-none">${data.imageName}</a>
+    </div>
+        
+        </td>
         <td><button type="button" class="btn btn-outline-danger" onclick="deleteRow(${data.id})">Delete</button> 
          <button type="button" class="btn btn-outline-info" onclick="updateRow(${data.id})">Update</button></td>
         </tr>
