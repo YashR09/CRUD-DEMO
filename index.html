@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CRUD DEMO</title>
+    <link rel="stylesheet" href="./css/Style.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="d-flex justify-content-center align-items-center mt-5">
+        <div
+          class="col-5 form d-flex justify-content-center align-items-center text-uppercase"
+        >
+          <form id="loginForm">
+            <legend class="text-center fw-bold fs-3">User Registration</legend>
+            <!-- <h2 class="fw-bold fs-4 d-flex justify-content-center align-items-center registration">User Registration</h2> -->
+            <div class="mb-3">
+              <label for="name" class="form-label fw-bold">Name</label>
+              <input
+                type="name"
+                class="form-control w-100 inputField"
+                id="name"
+                name="name"
+                required
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="email" class="form-label fw-bold"
+                >Email Address</label
+              >
+              <input
+                type="email"
+                class="form-control w-100 inputField"
+                id="email"
+                name="email"
+                required
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="phone" class="form-label fw-bold">Phone</label>
+              <input
+                type="tel"
+                class="form-control w-100 inputField"
+                id="phone"
+                name="phone"
+                maxlength="10"
+                required
+              />
+            </div>
+
+            <div class="mb-3">
+              <label for="message" class="form-label fw-bold">Message</label>
+              <textarea
+                name="message"
+                class="form-control w-100 inputField"
+                id="message"
+                cols="30"
+                rows="2"
+              ></textarea>
+            </div>
+            <div class="mb-3">
+                <label for="file" class="form-label fw-bold">Upload Profile Photo:</label>
+                <input 
+                type="file"
+                class="form-control file"
+                id="file"
+                name="file[]"
+                required
+                >
+            </div>
+
+            <div
+              class="d-flex justify-content-center align-items-center text-center"
+            >
+              <button
+                type="submit"
+                class="btn btn-success rounded-pill w-25"
+                onclick="savedata()"
+                class="button"
+              >
+                Submit
+              </button>
+            </div>
+
+            <p id="warning" class="fw-bold text-muted"></p>
+          </form>
+        </div>
+      </div>
+      <br /><br /><br />
+
+      <div class="d-flex justify-content-center align-items-center">
+        <div class="col-11 data" id="record-dom">
+          <table
+            class="table  text-dark ms-5 table-main border-dark"
+          >
+            <thead id="thead">
+              <tr class="text-center">
+                <td><b>ID</b></td>
+                <td><b>Name</b></td>
+                <td><b>Email</b></td>
+                <td><b>Phone</b></td>
+                <td><b>Message</b></td>
+                <td><b>Profile Photo</b></td>
+                <td><b>Action</b></td>
+              </tr>
+            </thead>
+
+            <tbody id="formdata"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+    <script src="./js/CRUD.js"></script>
+  </body>
+</html>

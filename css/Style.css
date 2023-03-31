@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;900&display=swap');
+
+.inputField {
+  caret-color: red;
+}
+
+body {
+  background: linear-gradient(90deg, hsla(213, 77%, 14%, 1) 0%, hsla(202, 27%, 45%, 1) 100%);
+  font-family: poppins;
+}
+
+.form {
+  position: relative;
+  height: 600px;
+  border-radius: 20px;
+  padding: 40px;
+  box-sizing: border-box;
+  background: #ecf0f3;
+  /* box-shadow: 14px 14px 20px #cbced1, -14px -14px 20px white; */
+}
+
+.inputField::placeholder {
+  color: gray;
+}
+
+.inputField {
+  background: #ecf0f3;
+  padding: 10px;
+  padding-left: 20px;
+  height: 50px;
+  font-size: 14px;
+  border-radius: 50px;
+  box-shadow: inset 6px 6px 6px #cbced1;
+}
+#message {
+resize: none;
+}
+
+.button {
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 6px 6px 6px #cbced1, -6px -6px 6px white;
+  transition: 0.5s;
+}
+
+.button:hover {
+  box-shadow: none;
+}
+.table{
+    border-radius: 20px;
+    box-sizing: border-box;
+    background: #ecf0f3;
+}
+#file{
+    background: #ecf0f3;
+    padding: 10px;
+    padding-left: 20px;
+    height: 50px;
+    box-shadow: inset 4px 4px 4px #cbced1;
+}
+
